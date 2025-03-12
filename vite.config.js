@@ -14,8 +14,6 @@ export default defineConfig({
     proxy: {
       '/api': {
         target: 'https://appsail-50025389578.development.catalystappsail.in',
-        changeOrigin: true,
-        secure: false
       }
     }
   }
