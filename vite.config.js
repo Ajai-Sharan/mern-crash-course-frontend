@@ -9,12 +9,5 @@ export default defineConfig({
     alias: {
       '@': path.resolve('./src')
     }
-  },
-  server: {
-    proxy: {
-      '/api': {
-        target: 'https://appsail-50025389578.development.catalystappsail.in',
-      }
-    }
   }
 })
