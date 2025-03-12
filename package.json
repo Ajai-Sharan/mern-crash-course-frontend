@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview"
   },
-  "proxy": "https://appsail-50025389021.development.catalystappsail.in",
+  "proxy": "https://appsail-50025389578.development.catalystappsail.in",
   "dependencies": {
     "@chakra-ui/react": "^3.11.0",
     "@emotion/react": "^11.14.0",
