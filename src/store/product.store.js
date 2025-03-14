@@ -7,6 +7,7 @@ export const useProductStore = create((set) => ({
         try {
             const res = await fetch('https://appsail-50025389578.development.catalystappsail.in/api/product', {
                 method: 'POST',
+                credentials: "include",
                 headers: {
                     'Content-Type': 'application/json',
                 },
@@ -34,7 +35,10 @@ export const useProductStore = create((set) => ({
     },
     fetchProducts: async () => {
         try {
-            const res = await fetch('https://appsail-50025389578.development.catalystappsail.in/api/product');
+            const res = await fetch('https://appsail-50025389578.development.catalystappsail.in/api/product',{
+                method : "GET",
+                credentials : 'include'
+            });
             if (!res.ok) {
                 throw new Error('Failed to fetch products');
             }
@@ -48,6 +52,7 @@ export const useProductStore = create((set) => ({
         try {
             const res = await fetch(`https://appsail-50025389578.development.catalystappsail.in/api/product/${pid}`, {
                 method: 'DELETE',
+                credentials : 'include'
             });
 
             if (!res.ok) {
@@ -65,6 +70,7 @@ export const useProductStore = create((set) => ({
         try {
             const res = await fetch(`https://appsail-50025389578.development.catalystappsail.in/api/product/${pid}`, {
                 method: 'PUT',
+                credentials : "include",
                 headers: {
                     'Content-Type': 'application/json',
                 },
